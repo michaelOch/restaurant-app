@@ -1,0 +1,6 @@
+/* Footer section */
+.footer-section {
+    background-color: var(--theme-secondary);
+    color: whitesmoke;
+    padding: 50px 0;
+}

@@ -1,0 +1,86 @@
+
+
+/* About Section */
+/* .about-section {
+    padding: 5px 0;
+} */
+
+.about-section .about-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-section p {
+    font-size: 18px;
+}
+
+/* Category Section */
+.category-section {
+    padding: 25px 0;
+}
+
+.category-section h3 {
+    color: #ffffff;
+}
+
+.category-section .pastry-section {
+    height: 350px;
+    background-image: url(../../assets/images/pastry.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #0009;
+}
+
+.category-section .bake-section {
+    height: 350px;
+    background-image: url(../../assets/images/bake.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #0009;
+}
+
+.category-section .cake-section {
+    height: 350px;
+    background-image: url(../../assets/images/cake.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #0009;
+}
+
+/* Branch Section */
+/* .branch-section {
+    padding: 50px 0;
+} */
+
+/* History Section */
+.history-section {
+    padding: 25px 0;
+}
+
+.history-section .history-content {
+    background-image: url(../../assets/images/restaurant.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 400px;
+}
+
+/* Product Section */
+.product-section {
+    padding: 50px 0;
+}
+
+.product-section .product-avatar {
+    max-width: 208px;
+    margin: 0 auto;
+}
+
+.product-section .product-avatar img {
+    width: 100%;
+}
