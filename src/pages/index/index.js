@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 import carousel1 from '../../assets/images/carousel-1.jpg';
 import carousel2 from '../../assets/images/carousel-2.jpg';
@@ -13,18 +14,43 @@ function Index() {
     return (
         <main>
             {/* Header Section */}
+            <Navbar />
             <section className='header-section'>
-                <div className=''>
-                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
+                <div className='header-content h-100'>
+                    <div id="carouselExampleControls" className="carousel slide h-100" data-bs-ride="carousel">
+                        <div className="carousel-inner h-100">
+                            <div className="carousel-item h-100 position-relative active">
                                 <img src={carousel1} className="d-block w-100" alt="carousel 1" />
+                                <div className='carousel-content d-flex flex-column justify-content-center align-items-center'>
+                                    <h1 className='text-center'>CRAFTSMANSHIP, PASSION</h1>
+                                    <p className='mb-0 text-center'>
+                                        <Link to='/' className='btn btn-lg btn-primary'>
+                                            Checkout our products
+                                        </Link>
+                                    </p>
+                                </div>
                             </div>
-                            <div className="carousel-item">
+                            <div className="carousel-item h-100 position-relative">
                                 <img src={carousel2} className="d-block w-100" alt="carousel 2" />
+                                <div className='carousel-content d-flex flex-column justify-content-center align-items-center'>
+                                    <h1 className='text-center'>DELICIOUS BREAKFAST</h1>
+                                    <p className='mb-0 text-center'>
+                                        <Link to='/' className='btn btn-lg btn-primary'>
+                                            Checkout out now
+                                        </Link>
+                                    </p>
+                                </div>
                             </div>
-                            <div className="carousel-item">
+                            <div className="carousel-item h-100 position-relative">
                                 <img src={carousel3} className="d-block w-100" alt="carousel 3" />
+                                <div className='carousel-content d-flex flex-column justify-content-center align-items-center'>
+                                    <h1 className='text-center'>BREAD ROLLS</h1>
+                                    <p className='mb-0 text-center'>
+                                        <Link to='/' className='btn btn-lg btn-primary'>
+                                            Checkout
+                                        </Link>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -40,9 +66,9 @@ function Index() {
             </section>
             {/* About Section */}
             <section className='about-section'>
-                <div className='container'>
+                <div className='container-fluid'>
                     <div className='p-5 about-content'>
-                        <h1 className='text-center'>Handmade in Geesthacht</h1>
+                        <h1 className='text-center'>Handmade in Abuja</h1>
                         <p className='text-center'>
                             We don't just bake bread and rolls. We bake with passion - and for the love of traditional craftsmanship. It tastes good all over Geesthacht!
                         </p>
@@ -54,7 +80,7 @@ function Index() {
             </section>
             {/* Category Section */}
             <section className='category-section'>
-                <div className='container'>
+                <div className='container-fluid'>
                     <div className=''>
                         <div className='row'>
                             <div className='col-md-6 mt-3'>
@@ -87,7 +113,7 @@ function Index() {
             </section>
             {/* Branch Section */}
             <section className='branch-section'>
-                <div className='container'>
+                <div className='container-fluid'>
                     <div className='p-5'>
                         <h2 className='text-center'>HERE YOU WILL FIND A BRANCH NEAR YOU</h2>
                         <p className='text-center mt-4'>
@@ -98,7 +124,7 @@ function Index() {
             </section>
             {/* History Section */}
             <section className='history-section'>
-                <div className='container'>
+                <div className='container-fluid'>
                     <div className='history-content d-flex justify-content-center align-items-center'>
                         <p className='text-center'>
                             <Link to='/' className='btn btn-lg btn-secondary'>HISTORY</Link>
@@ -108,7 +134,7 @@ function Index() {
             </section>
             {/* Product Section */}
             <section className='product-section'>
-                <div className='container'>
+                <div className='container-fluid'>
                     <div className=''>
                         <h2 className='text-center'>OUR PRODUCTS</h2>
                         <div className='row mt-5'>

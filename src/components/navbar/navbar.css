@@ -1,0 +1,9 @@
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--theme-primary);
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 1px 3px;
+}

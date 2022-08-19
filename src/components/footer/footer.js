@@ -7,7 +7,7 @@ import { faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/fre
 function Footer() {
     return (
         <section className='footer-section'>
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-6'>
                         <div className=''>

@@ -1,4 +1,25 @@
 
+/* Header Section */
+.header-section {
+    height: 100vh;
+}
+
+.header-section .header-content {
+    height: 100%;
+}
+
+.header-section .carousel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.header-section .carousel-content h1 {
+    color: #ffffff;
+}
 
 /* About Section */
 /* .about-section {
