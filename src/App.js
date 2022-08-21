@@ -4,6 +4,9 @@ import Home from './pages/index/index';
 import Shop from './pages/shop/shop';
 import Register from './pages/register/register';
 import Login from './pages/login/login';
+import Dashboard from './pages/dashboard/index/index';
+import Category from './pages/dashboard/category/category';
+import SubCategory from './pages/dashboard/subCategory/subCategory';
 
 function App() {
     return (
@@ -40,6 +43,18 @@ function App() {
                 <Route
                     path='/login'
                     element={<Login />}
+                />
+                <Route
+                    path='/dashboard'
+                    element={<Dashboard />}
+                />
+                <Route
+                    path='/dashboard/category'
+                    element={<Category />}
+                />
+                <Route
+                    path='/dashboard/subcategory'
+                    element={<SubCategory />}
                 />
             </Routes>
         </Router>

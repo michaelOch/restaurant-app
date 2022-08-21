@@ -1,0 +1,10 @@
+.dash-body {
+    background-color: #f3f4f3;
+    min-height: 100vh;
+    margin-left: 250px;
+    padding-top: 100px;
+}
+
+.dash-content {
+    background-color: #ffffff;
+}

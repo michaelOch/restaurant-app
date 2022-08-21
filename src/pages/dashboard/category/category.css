@@ -1,0 +1,9 @@
+thead {
+    background-color: #f8faff;
+    color: var(--theme-primary);
+}
+
+table button {
+    border: none;
+    background-color: transparent;
+}

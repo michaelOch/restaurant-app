@@ -1,0 +1,31 @@
+.dash-header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: 250px;
+    z-index: 1000;
+}
+
+.search-section {
+    max-width: 250px;
+}
+
+.search-section .input-group-text {
+    background-color: transparent;
+    border-color: var(--theme-primary);
+}
+
+.search-section .form-control {
+    border-color: var(--theme-primary);
+    border-left: none;
+    outline: none;
+}
+
+.search-section .form-control:active,
+.search-section .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
