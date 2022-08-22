@@ -7,6 +7,7 @@ import Login from './pages/login/login';
 import Dashboard from './pages/dashboard/index/index';
 import Category from './pages/dashboard/category/category';
 import SubCategory from './pages/dashboard/subCategory/subCategory';
+import Product from './pages/dashboard/product/product';
 
 function App() {
     return (
@@ -55,6 +56,10 @@ function App() {
                 <Route
                     path='/dashboard/subcategory'
                     element={<SubCategory />}
+                />
+                <Route
+                    path='/dashboard/product'
+                    element={<Product />}
                 />
             </Routes>
         </Router>

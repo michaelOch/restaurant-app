@@ -23,27 +23,27 @@ function DashSidebar() {
                                 </Link>
                             </li>
                             <li className='nav-item mb-4'>
-                                <Link to='/dashboard' className=''>
+                                <Link to='/dashboard/category' className=''>
                                     <FontAwesomeIcon icon={faList} color={primaryColor} /> Category
                                 </Link>
                             </li>
                             <li className='nav-item mb-4'>
-                                <Link to='/dashboard' className=''>
+                                <Link to='/dashboard/subcategory' className=''>
                                     <FontAwesomeIcon icon={faListAlt} color={primaryColor} /> Sub-category
                                 </Link>
                             </li>
                             <li className='nav-item mb-4'>
-                                <Link to='/dashboard' className=''>
+                                <Link to='/dashboard/product' className=''>
                                     <FontAwesomeIcon icon={faBasketShopping} color={primaryColor} /> Products
                                 </Link>
                             </li>
                             <li className='nav-item mb-4'>
-                                <Link to='/dashboard' className=''>
+                                <Link to='/dashboard/orders' className=''>
                                     <FontAwesomeIcon icon={faCartShopping} color={primaryColor} /> Orders
                                 </Link>
                             </li>
                             <li className='nav-item mb-4'>
-                                <Link to='/dashboard' className=''>
+                                <Link to='/dashboard/sales' className=''>
                                     <FontAwesomeIcon icon={faBook} color={primaryColor} /> Sales
                                 </Link>
                             </li>
