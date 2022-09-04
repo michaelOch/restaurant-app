@@ -3,9 +3,9 @@ import DashLayout from '../../../components/dashLayout/dashLayout';
 
 function Index() {
     return (
-        <DashLayout>
+        <main>
             
-        </DashLayout>
+        </main>
     )
 }
 

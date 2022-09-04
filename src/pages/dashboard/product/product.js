@@ -8,7 +8,7 @@ const primaryColor = '#64c5b1';
 
 function Product() {
     return (
-        <DashLayout>
+        <main>
             <section className=''>
                 <h6 className='mb-3'>Product</h6>
                 <div className='d-flex justify-content-between align-items-center'>
@@ -50,7 +50,7 @@ function Product() {
                     </tbody>
                 </table>
             </section>
-        </DashLayout>
+        </main>
     )
 }
 

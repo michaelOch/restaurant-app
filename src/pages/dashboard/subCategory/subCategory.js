@@ -8,7 +8,7 @@ const primaryColor = '#64c5b1';
 
 function SubCategory() {
     return (
-        <DashLayout>
+        <main>
             <section className=''>
                 <h6 className='mb-3'>Sub-Category</h6>
                 <div className='d-flex justify-content-between align-items-center'>
@@ -43,7 +43,7 @@ function SubCategory() {
                     </tbody>
                 </table>
             </section>
-        </DashLayout>
+        </main>
     )
 }
 

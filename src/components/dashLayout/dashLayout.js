@@ -1,11 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import DashHeader from '../dashHeader/dashHeader';
 import DashSidebar from '../dashSidebar/dashSidebar';
 import './dashLayout.css';
 
-function DashLayout({ children }) {
+function DashLayout() {
     return (
-        <main>
+        <>
             {/* Dashboard Header */}
             <DashHeader />
             {/* Dashboard Sidebar */}
@@ -13,11 +14,11 @@ function DashLayout({ children }) {
             <section className='dash-body'>
                 <div className='container'>
                     <div className='dash-content p-3'>
-                        {children}
+                        <Outlet />
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     )
 }
 

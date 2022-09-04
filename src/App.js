@@ -8,59 +8,28 @@ import Dashboard from './pages/dashboard/index/index';
 import Category from './pages/dashboard/category/category';
 import SubCategory from './pages/dashboard/subCategory/subCategory';
 import Product from './pages/dashboard/product/product';
+import Layout from './components/layout/layout';
+import DashLayout from './components/dashLayout/dashLayout';
 
 function App() {
     return (
         <Router>
             <Routes>
-                {/** Protected Routes */}
-                {/* <Route element={<PersistLogin />}>
-                    <Route element={<RequireAuth />}>
-                        <Route path='/' element={<Home />} />
-                    </Route>
-                    <Route element={<RequireAuth />}>
-                        <Route path='/home' element={<Home />} />
-                    </Route>
-                    <Route element={<RequireAuth />}>
-                        <Route path='/profile' element={<Profile />} />
-                    </Route>
-                </Route> */}
-                <Route
-                    path='/'
-                    element={<Home />}
-                />
-                <Route
-                    path='/home'
-                    element={<Home />}
-                />
-                <Route
-                    path='/shop'
-                    element={<Shop />}
-                />
-                <Route
-                    path='/register'
-                    element={<Register />}
-                />
-                <Route
-                    path='/login'
-                    element={<Login />}
-                />
-                <Route
-                    path='/dashboard'
-                    element={<Dashboard />}
-                />
-                <Route
-                    path='/dashboard/category'
-                    element={<Category />}
-                />
-                <Route
-                    path='/dashboard/subcategory'
-                    element={<SubCategory />}
-                />
-                <Route
-                    path='/dashboard/product'
-                    element={<Product />}
-                />
+                <Route path='/' element={<Layout />}>
+
+                    <Route index element={<Home />}/>
+                    <Route path='shop' element={<Shop />}/>
+                    <Route path='register' element={<Register />}/>
+                    <Route path='login' element={<Login />}/>
+
+                    <Route path='dashboard' element={<DashLayout />}>
+                        
+                        <Route index element={<Dashboard />}/>
+                        <Route path='category' element={<Category />}/>
+                        <Route path='subcategory' element={<SubCategory />}/>
+                        <Route path='product' element={<Product />}/>
+                    </Route>{/* END dashboard */}
+                </Route>
             </Routes>
         </Router>
     );
