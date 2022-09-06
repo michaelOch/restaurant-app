@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { faHome, faList, faListAlt, faCartShopping, faBasketShopping, faBook } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faList, faListAlt, faCartShopping, faBasketShopping, faBook, faUsers } from '@fortawesome/free-solid-svg-icons';
 import './dashSidebar.css';
 
 const primaryColor = '#64c5b1';
@@ -45,6 +45,11 @@ function DashSidebar() {
                             <li className='nav-item mb-4'>
                                 <Link to='/dashboard/sales' className=''>
                                     <FontAwesomeIcon icon={faBook} color={primaryColor} /> Sales
+                                </Link>
+                            </li>
+                            <li className='nav-item mb-4'>
+                                <Link to='/dashboard/users' className=''>
+                                    <FontAwesomeIcon icon={faUsers} color={primaryColor} /> Users
                                 </Link>
                             </li>
                         </ul>

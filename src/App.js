@@ -10,6 +10,7 @@ import SubCategory from './pages/dashboard/subCategory/subCategory';
 import Product from './pages/dashboard/product/product';
 import Layout from './components/layout/layout';
 import DashLayout from './components/dashLayout/dashLayout';
+import User from './pages/dashboard/user/user';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         <Route path='category' element={<Category />}/>
                         <Route path='subcategory' element={<SubCategory />}/>
                         <Route path='product' element={<Product />}/>
+                        <Route path='users' element={<User />}/>
                     </Route>{/* END dashboard */}
                 </Route>
             </Routes>
