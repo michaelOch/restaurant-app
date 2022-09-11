@@ -10,7 +10,7 @@ import SubCategory from './pages/dashboard/subCategory/subCategory';
 import Product from './pages/dashboard/product/product';
 import Layout from './components/layout/layout';
 import DashLayout from './components/dashLayout/dashLayout';
-import User from './pages/dashboard/user/user';
+import User from './pages/dashboard/user/index';
 
 function App() {
     return (
