@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faEye, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faEdit, faEye, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
@@ -15,7 +15,7 @@ const User = ({ userId }) => {
     const navigate = useNavigate();
 
     if (user) {
-        const handleEdit = () => navigate(`/dashboard/user/${userId}`);
+        const handleEdit = () => navigate(`/dashboard/users/${userId}`);
 
         const useRolesString = user.roles.toString().replaceAll(',', ', ');
 
@@ -28,12 +28,10 @@ const User = ({ userId }) => {
                     <button type='button' className='mx-2' onClick={handleEdit}>
                         <FontAwesomeIcon icon={faEdit} color={primaryColor} />
                     </button>
-                    <button type='button' className='mx-2'>
-                        <FontAwesomeIcon icon={faTrash} color={primaryColor} />
-                    </button>
                 </td>
                 <td>{user.email}</td>
                 <td>{useRolesString}</td>
+                <td>{user.active ? <FontAwesomeIcon icon={faCheckCircle} /> : <FontAwesomeIcon icon={faCircleXmark} />}</td>
             </tr>
         )
     } else return null;

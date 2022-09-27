@@ -12,7 +12,6 @@ export const categorysApiSlice = apiSlice.injectEndpoints({
             validateStatus: (response, result) => {
                 return response.status === 200 && !result.isError
             },
-            keepUnusedDataFor: 5,
             transformResponse: responseData => {
                 const loadedCategorys = responseData.map(category => {
                     category.id = category._id;

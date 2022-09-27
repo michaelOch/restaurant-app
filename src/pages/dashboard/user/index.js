@@ -4,7 +4,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import './user.css';
 
 import { useGetUsersQuery } from './usersApiSlice';
-import User from './user';
+import User from './User';
 
 const primaryColor = '#64c5b1';
 
@@ -20,10 +20,10 @@ function Index() {
 
     let content;
 
-    if (isLoading) content = <p>Loading...</p>;
+    if (isLoading) content = <tr><td>Loading...</td></tr>;
 
     if (isError) {
-        content = <p className='text-danger'>{error?.data?.message}</p>;
+        content = <tr className='text-danger'><td>{error?.data?.message}</td></tr>;
     }
 
     if (isSuccess) {
@@ -50,12 +50,13 @@ function Index() {
                     </div>
                     <button type='button' className='btn btn-primary'>Add New</button>
                 </div>
-                <table class="table table-borderless mt-3">
+                <table className="table table-borderless mt-3">
                     <thead>
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Name</th>
                             <th scope="col">Role</th>
+                            <th scope="col">Active</th>
                         </tr>
                     </thead>
                     <tbody>
