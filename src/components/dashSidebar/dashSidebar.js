@@ -1,12 +1,45 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { faHome, faList, faListAlt, faCartShopping, faBasketShopping, faBook, faUsers } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { faHome, faList, faListAlt, faCartShopping, faBasketShopping, faBook, faUsers, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import './dashSidebar.css';
+
+import { useSendLogoutMutation } from '../../auth/authApiSlice';
 
 const primaryColor = '#64c5b1';
 
 function DashSidebar() {
+
+    const navigate = useNavigate();
+    const { pathname } = useLocation();
+
+    const [sendLogout, {
+        isLoading,
+        isSuccess,
+        isError,
+        error
+    }] = useSendLogoutMutation();
+
+    useEffect(() => {
+        if (isSuccess) navigate('/login');
+    }, [isSuccess, navigate]);
+
+    const onLogoutClicked = () => sendLogout();
+
+    if(isLoading) return <p>Logging out...</p>
+
+    if (isError) return <p>Error: {error.message}</p>
+
+    const logoutButton = (
+        <button
+            className='btn btn-primary'
+            title='Logout'
+            onClick={onLogoutClicked}
+        >
+            <FontAwesomeIcon icon={faRightFromBracket} /> &nbsp; Logout
+        </button>
+    )
+
     return (
         <section className='sidebar-section'>
             <div className='container-fluid'>
@@ -51,6 +84,9 @@ function DashSidebar() {
                                 <Link to='/dashboard/users' className=''>
                                     <FontAwesomeIcon icon={faUsers} color={primaryColor} /> Users
                                 </Link>
+                            </li>
+                            <li className='nav-item mb-4'>
+                                {logoutButton}
                             </li>
                         </ul>
                     </div>

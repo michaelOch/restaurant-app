@@ -13,7 +13,7 @@ function Navbar() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Restaurant App</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -14,33 +14,43 @@ import User from './pages/dashboard/user/index';
 import EditUser from './pages/dashboard/user/EditUser';
 import NewUserForm from './pages/dashboard/user/NewUserForm';
 import Prefetch from './auth/Prefetch';
+import PersistLogin from './auth/PersistLogin';
+import RequireAuth from './auth/RequireAuth';
+import { ROLES } from './config/roles';
 
 function App() {
     return (
         <Router>
             <Routes>
                 <Route path='/' element={<Layout />}>
-
+                    
+                    {/** public routes */}
                     <Route index element={<Home />}/>
                     <Route path='shop' element={<Shop />}/>
                     <Route path='register' element={<Register />}/>
                     <Route path='login' element={<Login />}/>
 
-                    <Route element={<Prefetch />}>
-                        <Route path='dashboard' element={<DashLayout />}>
-                            
-                            <Route index element={<Dashboard />}/>
-                            <Route path='category' element={<Category />}/>
-                            <Route path='subcategory' element={<SubCategory />}/>
-                            <Route path='product' element={<Product />}/>
+                    {/** protected routes */}
+                    <Route element={<PersistLogin />}>
+                        <Route element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}>
+                            <Route element={<Prefetch />}>
+                                <Route path='dashboard' element={<DashLayout />}>
+                                    
+                                    <Route index element={<Dashboard />}/>
+                                    <Route path='category' element={<Category />}/>
+                                    <Route path='subcategory' element={<SubCategory />}/>
+                                    <Route path='product' element={<Product />}/>
 
-                            <Route path='users'>
-                                <Route index element={<User />}/>
-                                <Route path=':id' element={<EditUser />}/>
-                                <Route path='new' element={<NewUserForm />}/>
+                                    <Route path='users'>
+                                        <Route index element={<User />}/>
+                                        <Route path=':id' element={<EditUser />}/>
+                                        <Route path='new' element={<NewUserForm />}/>
+                                    </Route>
+                                </Route>{/* END dashboard */}
                             </Route>
-                        </Route>{/* END dashboard */}
+                        </Route>
                     </Route>
+                    {/** End protected routes */}
                 </Route>
             </Routes>
         </Router>
